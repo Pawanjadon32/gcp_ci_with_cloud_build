@@ -29,5 +29,8 @@ steps:
     - managed
     - --allow-unauthenticated
 
+options:
+  logging: CLOUD_LOGGING_ONLY
+
 images:
 - 'asia-south1-docker.pkg.dev/$PROJECT_ID/my-repo/my-cloudrun-app:$COMMIT_SHA'
