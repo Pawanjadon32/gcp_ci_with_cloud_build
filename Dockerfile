@@ -1,18 +1,9 @@
-# ---- Pawan Rana Profile Card ----
-# Base image: lightweight nginx web server
 FROM nginx:alpine
 
-# Set working directory
-WORKDIR /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
 
-# Remove default nginx page
-RUN rm -f index.html
+COPY index.html /usr/share/nginx/html/index.html
 
-# Copy profile HTML into container
-COPY index.html .
+EXPOSE 8080
 
-# Expose port 80
-EXPOSE 80
-
-# Start nginx
 CMD ["nginx", "-g", "daemon off;"]
