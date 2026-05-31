@@ -28,6 +28,8 @@ steps:
     - --platform
     - managed
     - --allow-unauthenticated
+    - --service-account
+    - github-terraform@project-a54ee2ee-1abc-4f95-a01.iam.gserviceaccount.com
 
 options:
   logging: CLOUD_LOGGING_ONLY
